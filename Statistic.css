@@ -11,14 +11,15 @@
       justify-content: center;
       align-items: center;
       min-height: 100vh;
-      padding: 20px;
+      padding: 0px;
+      border: none;
     }
 
     /* Frame outer container */
     .page-frame {
       background-color: #e3e3e3;
       padding: 20px;
-      border: 1px solid #c8c8c8;
+      border: 0px solid #c8c8c8;
       max-width: 900px;
       width: 100%;
     }

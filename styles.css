@@ -1,5 +1,4 @@
 
-
 * {
       margin: 0;
       padding: 0;
@@ -33,6 +32,7 @@
       opacity: 0;
       transition: opacity 0.8s ease-in-out;
       position: relative;
+      width: 100%;
     }
 
     /* --- GLOBAL HEADER SECTION --- */
