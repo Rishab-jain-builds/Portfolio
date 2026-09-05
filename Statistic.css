@@ -1,0 +1,359 @@
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      background-color: #d8dcdb;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      padding: 20px;
+    }
+
+    /* Frame outer container */
+    .page-frame {
+      background-color: #e3e3e3;
+      padding: 20px;
+      border: 1px solid #c8c8c8;
+      max-width: 900px;
+      width: 100%;
+    }
+
+    .portfolio-container {
+      background-color: #1470af;
+      color: #ffffff;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+      opacity: 0;
+      transition: opacity 0.8s ease-in-out;
+      position: relative;
+      width: 100%;
+      overflow: hidden;
+    }
+
+    /* --- GLOBAL HEADER SECTION --- */
+    .top-section {
+      padding: 30px 40px 20px 40px;
+    }
+
+    /* Row 1: Name (Left) & Social Icons (Right) */
+    .header-main-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 15px;
+    }
+
+    .brand-name {
+      font-size: 1.1rem;
+      font-weight: 600;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+
+    .social-links {
+      display: flex;
+      gap: 10px;
+    }
+
+    .social-icon {
+      color: #ffffff;
+      font-size: 1rem;
+      width: 34px;
+      height: 34px;
+      border-radius: 50%;
+      background-color: rgba(255, 255, 255, 0.15);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+
+    .social-icon:hover {
+      background-color: #ffffff;
+      color: #4572c2;
+      transform: translateY(-2px);
+    }
+
+    /* Row 2: Navigation Bar */
+    .nav-bar {
+      display: flex;
+      gap: 12px;
+      margin-bottom: 30px;
+      padding-top: 10px;
+      border-top: 1px solid rgba(255, 255, 255, 0.15);
+      flex-wrap: wrap;
+    }
+
+    .nav-btn {
+      color: #ffffff;
+      text-decoration: none;
+      font-size: 0.88rem;
+      font-weight: 500;
+      padding: 6px 16px;
+      border-radius: 20px;
+      background-color: rgba(255, 255, 255, 0.15);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      transition: all 0.3s ease;
+      white-space: nowrap;
+    }
+
+    .nav-btn:hover,
+    .nav-btn.active {
+      background-color: #ffffff;
+      color: #4572c2;
+      transform: translateY(-2px);
+    }
+
+     /* Main Content */
+.About_Instructor {
+  display: flex;
+  Background-color: #1470af;
+  margin-bottom: 20px;
+}
+
+.About_Course {
+  display: flex;
+  Background-color: #fafafa;
+  margin-bottom: 50px;
+  margin-top: 50px;
+  min-height: 360px; 
+}
+
+.left-panel {
+  margin-left: 60px;  
+  float: left;
+  width: 30%;
+  padding: 0px;
+}
+.Right-panel {
+  float: right;
+  width: 70%;
+  padding: 0px;
+}
+.Right-panel h1 {
+    font-size: 36px;
+    color: azure;
+    font-family:cursive;
+}
+
+.Right-panel p {
+    font-size: 24px;
+    color: azure;
+    font-family:sans-serif;
+}
+.Left-Column {
+  margin-left: 50px;  
+  float: left;
+  width: 70%;
+  padding: 0px;
+}
+
+.Left-Column h1 {
+  font-size: 36px;
+  color: #1470af;
+  font-family:cursive;  
+}
+
+.Left-Column p {
+  font-size: 24px;
+  color: #1470af;
+  font-family:sans-serif;
+}
+
+.Left-Column ul {
+  list-style-type: square;
+  padding: 0;
+  font-size: 24px;
+  color: #1470af;
+}
+
+.Right-Column {
+  float: right;
+  width: 30%;
+  padding: 0px;
+}
+.Right-panel ul {
+  list-style-type: square;
+  padding: 0;
+  font-size: 24px;
+  color:azure;
+}
+
+.Instructor_Img {
+  width: 230px;
+  height: 230px;
+  margin-top: 10px;
+  border: 2px solid azure;
+}
+.Statistic_Img {
+  width: 230px;
+  height: 230px;
+  margin-top: 60px;
+  margin-left: 50px;
+  border: 2px solid #1470af;
+}
+
+.Activities {
+  padding: 30px 40px;
+  background-color: #FFFFFF;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.left-Activity { 
+  margin-left: 0px;  
+  float: left;
+  width: 20%;
+  padding: 0px;
+  background-color: #1470af;
+}
+
+.left-Activity h1 {
+  font-size: 36px;
+  color: azure;
+  font-family: sans-serif;
+  text-align: center;  
+  background-color: #1470af; 
+}
+.Right-Activity {
+  float: right;
+  width: 80%;
+  padding: 0px;
+  background-color: #1470af;
+}
+.Right-Activity p {
+  font-size: 16px;
+  color: azure;
+}
+.L1 {
+    list-style-type: none;
+    padding: 0;
+    font-size: 16px;
+    color: azure;
+}
+.L2 {
+    list-style-type: square;
+    padding: 0;
+    font-size: 16px;
+    color: azure;
+    margin-left: 30px;
+}
+
+a {
+  margin-right: 20px; /* Adjust spacing as needed */
+}
+
+/* Remove margin from the last link so it stays aligned */
+a:last-child {
+  margin-right: 0;
+}
+ .footer{
+    padding: 20px 40px;
+    background-color: #0a90c6;
+    border-top: 1px solid #140202;
+    font-size: 0.9rem;
+    color: #333;
+    } 
+
+.footer p{
+    font-size:1.05rem;
+    line-height:1.65;
+    color: #ffffff;
+    }
+
+   /* Mobile Responsiveness Styles */
+@media screen and (max-width: 768px) {
+  /* Reset outer wrappers */
+  body {
+    padding: 0;
+  }
+
+  .page-frame {
+    padding: 10px;
+    border: none;
+  }
+
+  .top-section,
+  .Activities,
+  .footer {
+    padding: 20px 15px;
+  }
+
+  /* Header and Navigation adjustments */
+  .header-main-bar {
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
+  }
+
+  .nav-bar {
+    justify-content: center;
+  }
+
+  /* Structural conversions: Clear floats and make columns full width */
+  .About_Instructor,
+  .About_Course,
+  .F {
+    flex-direction: column;
+    display: flex;
+  }
+
+  .left-panel,
+  .Right-panel,
+  .Left-Column,
+  .Right-Column,
+  .left-Activity,
+  .Right-Activity {
+    float: none !important;
+    width: 100% !important;
+    margin-left: 0 !important;
+    padding: 10px 15px !important;
+  }
+
+  /* Image scaling for smaller viewports */
+  .Instructor_Img,
+  .Statistic_Img {
+    width: 100%;
+    max-width: 230px;
+    height: auto;
+    margin: 0 auto 20px auto;
+    display: block;
+  }
+
+  /* Typography scale adjustments for readability */
+  .Right-panel h1,
+  .Left-Column h1,
+  .left-Activity h1 {
+    font-size: 24px;
+  }
+
+  .Right-panel p,
+  .Left-Column p,
+  .Right-panel ul,
+  .Left-Column ul {
+    font-size: 16px;
+  }
+
+  /* Clean up legacy break line spacing on mobile */
+  .left-Activity br,
+  .Left-Column br {
+    display: none;
+  }
+
+  .left-Activity hr {
+    display: none;
+  }
+
+  .left-Activity h1 {
+    padding: 10px 0;
+  }
+
+  /* Alignment fixes */
+  .footer p {
+    text-align: center !important;
+  }
+} 
