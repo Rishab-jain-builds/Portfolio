@@ -200,12 +200,43 @@
 }
 
 .Activities {
-  padding: 30px 40px;
-  background-color: #FFFFFF;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding-top: 0px;
+  padding-left: 30px;
+  padding-right: 30px;
+  background-color: #1470af;
+  color: azure;
+  border-top: none;
+  margin-top: 0px;
 }
 
-.left-Activity { 
+.Activities h1 {
+  font-size: 36px;
+  color: azure;
+  font-family:cursive;
+  text-align: center;  
+  margin-top: 0px; 
+  margin-bottom: 10px;
+}
+
+.Activities p {
+  font-size: 20px;
+  color: azure;
+  font-family:sans-serif;
+  text-align: center;  
+  margin-top: 0px; 
+  margin-bottom: 10px;
+}
+
+.F {
+  display: flex;
+  Background-color: #1470af;
+  margin-bottom: 20px;
+}
+
+.left-Activity-1, 
+.left-Activity-2, 
+.left-Activity-3, 
+.left-Activity-4 { 
   margin-left: 0px;  
   float: left;
   width: 20%;
@@ -213,35 +244,47 @@
   background-color: #1470af;
 }
 
-.left-Activity h1 {
+.left-Activity-1 h1, 
+.left-Activity-2 h1, 
+.left-Activity-3 h1, 
+.left-Activity-4 h1 {
   font-size: 36px;
   color: azure;
   font-family: sans-serif;
   text-align: center;  
-  background-color: #1470af; 
+  background-color: #1470af;
+  margin-top: 50%; 
 }
-.Right-Activity {
+.Right-Activity-1, 
+.Right-Activity-2, 
+.Right-Activity-3, 
+.Right-Activity-4 {
   float: right;
   width: 80%;
   padding: 0px;
   background-color: #1470af;
 }
-.Right-Activity p {
+.Right-Activity-1 p, 
+.Right-Activity-2 p, 
+.Right-Activity-3 p, 
+.Right-Activity-4 p {
   font-size: 16px;
   color: azure;
+  text-align: left;
+  font-family: segoe ui;
 }
 .L1 {
     list-style-type: none;
-    padding: 0;
+    padding: 2.5px;
     font-size: 16px;
     color: azure;
-}
+} 
 .L2 {
     list-style-type: square;
     padding: 0;
     font-size: 16px;
     color: azure;
-    margin-left: 30px;
+    margin-left: 35px;
 }
 
 a {
@@ -258,6 +301,7 @@ a:last-child {
     border-top: 1px solid #140202;
     font-size: 0.9rem;
     color: #333;
+    min-height: 100px;
     } 
 
 .footer p{
@@ -265,6 +309,8 @@ a:last-child {
     line-height:1.65;
     color: #ffffff;
     }
+
+
 
    /* Mobile Responsiveness Styles */
 @media screen and (max-width: 768px) {
@@ -307,8 +353,12 @@ a:last-child {
   .Right-panel,
   .Left-Column,
   .Right-Column,
-  .left-Activity,
-  .Right-Activity {
+  .left-Activity-1,
+  .left-Activity-2,
+  .left-Activity-3,
+  .Right-Activity-1,
+  .Right-Activity-2,
+  .Right-Activity-3 {
     float: none !important;
     width: 100% !important;
     margin-left: 0 !important;
@@ -328,8 +378,11 @@ a:last-child {
   /* Typography scale adjustments for readability */
   .Right-panel h1,
   .Left-Column h1,
-  .left-Activity h1 {
+  .left-Activity-1 h1,
+  .left-Activity-2 h1,
+  .left-Activity-3 h1 {
     font-size: 24px;
+    margin-top: 0px;
   }
 
   .Right-panel p,
@@ -340,16 +393,22 @@ a:last-child {
   }
 
   /* Clean up legacy break line spacing on mobile */
-  .left-Activity br,
+  .left-Activity-1 br,
+  .left-Activity-2 br,
+  .left-Activity-3 br, 
+  .Right-Activity-1 br,
+  .Right-Activity-2 br,
+  .Right-Activity-3 br {
+    display: none;
+  }
+
   .Left-Column br {
     display: none;
   }
 
-  .left-Activity hr {
-    display: none;
-  }
-
-  .left-Activity h1 {
+  .left-Activity-1 h1,
+  .left-Activity-2 h1,
+  .left-Activity-3 h1 {
     padding: 10px 0;
   }
 
@@ -358,3 +417,8 @@ a:last-child {
     text-align: center !important;
   }
 } 
+
+
+
+
+/* I hope it works for you. If you need any further assistance or modifications, feel free to ask! */
