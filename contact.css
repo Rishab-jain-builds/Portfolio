@@ -116,7 +116,7 @@
       display: flex;
       padding: 40px;
       gap: 40px;
-      min-height: 420px;
+      min-height: 560px;
     }
 
     /* Left Side Title */
@@ -134,7 +134,7 @@
 
     /* Lower Left Social Section */
     .bottom-left-socials {
-      margin-top: 250px;
+      margin-top: 330px;
       display: flex;
       flex-direction: column;
       gap: 12px;

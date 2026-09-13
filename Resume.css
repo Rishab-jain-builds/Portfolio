@@ -138,6 +138,25 @@
     .hidden {
       display: none;
     }
+    
+    .pdf {
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      background-color: rgba(255, 255, 255, 0.15);
+      border-radius: 20px;
+      padding: 6px 16px;
+      font-size: 1rem;
+      justify-content: middle;
+      align-items: center;
+      margin-top: 20px;
+      color: #ffffff;
+      text-decoration: none;
+    }
+
+    .pdf:hover {
+      color: #1470af;
+      background-color: #ffffff;
+      transform: translateY(-2px);
+    }
 
     .accordion-item {
       border-bottom: 1px solid rgba(255, 255, 255, 0.25);
