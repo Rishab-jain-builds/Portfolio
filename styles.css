@@ -209,25 +209,19 @@
       background-color: #ffffff;
       width: 50%;
       display: flex;
-      align-items: center;
+      align-items: top;
       justify-content: center;
       padding: 20px;
     }
 
-    .intro-title-wrapper {
-      position: relative;
-      text-align: center;
-    }
-
     .intro-text {
-      font-size: 4.5rem;
+      font-size: 3.5rem;
       font-weight: 800;
       color: #4a82be;
       letter-spacing: 2px;
       position: relative;
-      
-      /* Reflection Effect */
-      -webkit-box-reflect: below -30px linear-gradient(transparent 0%, rgba(255, 255, 255, 0.7));
+      text-align: center;
+      vertical-align: top;
     }
 
     /* Right Text Panel */
