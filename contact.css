@@ -29,8 +29,6 @@
       background-color: #1470af;
       color: #ffffff;
       box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
-      opacity: 0;
-      transition: opacity 0.8s ease-in-out;
       position: relative;
       width: 100%;
       Overflow: hidden;
@@ -41,6 +39,50 @@
       padding: 30px 40px 20px 40px;
     }
 
+/* hamburger */
+
+  .hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  cursor: pointer;
+  padding: 0;
+  transition: all 0.3s ease;
+  }
+
+.hamburger:hover {
+  background-color: #ffffff;
+}
+
+.hamburger span {
+  width: 16px;
+  height: 2px;
+  background-color: #ffffff;
+  border-radius: 2px;
+  margin: 0 auto;
+  transition: all 0.3s ease;
+}
+
+.hamburger:hover span {
+  background-color: #4572c2;
+}
+
+/* Morph into an X when open */
+.hamburger.active span:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+.hamburger.active span:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
     /* Row 1: Name (Left) & Social Icons (Right) */
     .header-main-bar {
       display: flex;
@@ -258,4 +300,31 @@
       .bottom-left-socials {
         margin-top: 20px;
       }
+         
+  .hamburger {
+    display: flex;
+  }
+
+  .nav-bar {
+    flex-direction: column;
+    max-height: 0;
+    overflow: hidden;
+    gap: 8px;
+    padding-top: 0;
+    border-top: none;
+    margin-bottom: 0;
+    transition: max-height 0.35s ease, padding-top 0.35s ease, margin-bottom 0.35s ease;
+  }
+
+  .nav-bar.active {
+    max-height: 400px;
+    padding-top: 15px;
+    margin-bottom: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+  }
+
+  .nav-btn {
+    text-align: center;
+  }
     }
+    
