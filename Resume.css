@@ -32,6 +32,11 @@
       position: relative;
     }
     /* Hamburger menu */
+  .name-group {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
 
   .hamburger {
   display: none;
@@ -298,6 +303,7 @@
       .accordion-header {
         font-size: 1.6rem;
       }
+
 
   .hamburger {
     display: flex;

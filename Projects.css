@@ -35,6 +35,12 @@
       overflow: hidden;
     }
 
+  .name-group {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
   /* Hamburger  Menu */
   .hamburger {
   display: none;
@@ -294,8 +300,6 @@
   }
     }
 
-
-  
     @media (max-width: 480px) {
       .projects-grid {
         grid-template-columns: 1fr;

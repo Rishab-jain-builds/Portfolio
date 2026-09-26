@@ -15,6 +15,12 @@
       border: none;
     }
 
+    .name-group {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
     /* Frame outer container */
     .page-frame {
       background-color: #e3e3e3;
@@ -300,7 +306,7 @@
       .bottom-left-socials {
         margin-top: 20px;
       }
-         
+
   .hamburger {
     display: flex;
   }

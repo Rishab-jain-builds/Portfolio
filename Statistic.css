@@ -33,6 +33,11 @@
       overflow: hidden;
     }
 
+.name-group {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
 /* hamburger menu */
 
    .hamburger {
@@ -506,10 +511,5 @@
   .nav-btn {
     text-align: center;
   }
-    }
-
-
-
-
-
-/* I hope it works for you. If you need any further assistance or modifications, feel free to ask! */
+}
+  
