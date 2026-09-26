@@ -280,38 +280,28 @@
   margin-bottom: 20px;
 }
 
-.left-Activity-1, 
-.left-Activity-2, 
-.left-Activity-3, 
-.left-Activity-4 { 
+.left-Activity { 
   margin-left: 0px;  
   float: left;
   width: 20%;
   padding: 0px;
 }
 
-.left-Activity-1 h1, 
-.left-Activity-2 h1, 
-.left-Activity-3 h1, 
-.left-Activity-4 h1 {
+.left-Activity h1 {
   font-size: 36px;
   color: azure;
   font-family: sans-serif;
   text-align: center;  
   margin-top: 50%; 
 }
-.Right-Activity-1, 
-.Right-Activity-2, 
-.Right-Activity-3, 
-.Right-Activity-4 {
+ 
+.Right-Activity {
   float: right;
   width: 80%;
   padding: 0px;
 }
-.Right-Activity-1 p, 
-.Right-Activity-2 p, 
-.Right-Activity-3 p, 
-.Right-Activity-4 p {
+
+.Right-Activity p {
   font-size: 16px;
   color: azure;
   text-align: left;
@@ -392,7 +382,7 @@
     border: none;
   }
 
-  .top-section,
+  
   .Activities,
   .footer {
     padding: 20px 15px;
@@ -402,9 +392,15 @@
   .header-main-bar {
     flex-direction: column;
     gap: 15px;
-    text-align: center;
+    align-items: flex-start;
   }
 
+ .profile-header {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+ }
+ 
   .nav-bar {
     justify-content: center;
   }
@@ -421,12 +417,8 @@
   .Right-panel,
   .Left-Column,
   .Right-Column,
-  .left-Activity-1,
-  .left-Activity-2,
-  .left-Activity-3,
-  .Right-Activity-1,
-  .Right-Activity-2,
-  .Right-Activity-3 {
+  .left-Activity,
+  .Right-Activity {
     float: none !important;
     width: 100% !important;
     margin-left: 0 !important;
@@ -446,9 +438,7 @@
   /* Typography scale adjustments for readability */
   .Right-panel h1,
   .Left-Column h1,
-  .left-Activity-1 h1,
-  .left-Activity-2 h1,
-  .left-Activity-3 h1 {
+  .left-Activity h1 {
     font-size: 24px;
     margin-top: 0px;
   }
@@ -461,12 +451,8 @@
   }
 
   /* Clean up legacy break line spacing on mobile */
-  .left-Activity-1 br,
-  .left-Activity-2 br,
-  .left-Activity-3 br, 
-  .Right-Activity-1 br,
-  .Right-Activity-2 br,
-  .Right-Activity-3 br {
+  .left-Activity br,
+  .Right-Activity br {
     display: none;
   }
 
@@ -474,9 +460,7 @@
     display: none;
   }
 
-  .left-Activity-1 h1,
-  .left-Activity-2 h1,
-  .left-Activity-3 h1 {
+  .left-Activity h1 {
     padding: 10px 0;
   }
 
