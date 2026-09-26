@@ -4,7 +4,7 @@ A clean, responsive, multi-page personal portfolio website built with vanilla HT
 
 ## 🚀 Live Demo
 
-[View Live Website](https://Rishab-jain-builds/Portfolio/) *(Replace with your GitHub Pages link)*
+[View Live Website](https://Rishab-jain-builds/Portfolio/) 
 
 ---
 
@@ -41,5 +41,6 @@ A clean, responsive, multi-page personal portfolio website built with vanilla HT
     ├── Media editing google drive folder                         
 ├── research.html                                 # Research papers & ongoing work section
 ├── contact.html                                  # Direct contact details & social links
+├── Statistic.html                                # Course Review and Extra Activity showcase
 ├── LICENSE                                       # MIT License & Copyright declaration of the resporitory
 └── README.md                                     # Repository documentation
