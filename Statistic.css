@@ -148,6 +148,9 @@
       border: 1px solid rgba(255, 255, 255, 0.2);
       transition: all 0.3s ease;
       white-space: nowrap;
+      display: inline-flex;
+      gap: 10px;
+      align-items: center;
     }
 
     .nav-btn:hover,
