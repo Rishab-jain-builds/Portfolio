@@ -6,7 +6,7 @@ A clean, responsive, multi-page personal portfolio website built with vanilla HT
 
 [View Live Website](https://Rishab-jain-builds/Portfolio/) 
 
-[Preview](assets/preview.png) 
+[Preview](preview.png) 
 
 ---
 
@@ -59,7 +59,6 @@ The MIT License covers the code only. My personal content (resume, photos, certi
 │   ├── ml.html
 │   ├── cyber.html
 │   └── media-p.html
-├── research.html                # Research papers and ongoing work (currently hidden)
 ├── media.html                   # Certifications, achievements, and image gallery (currently hidden)
 ├── contact.html                 # Contact details and social links
 ├── statistics.html              # Course reviews and extra-activity showcase
@@ -86,7 +85,7 @@ cd Portfolio
 ## 📝 Notes for Visitors
 
 - Repository last updated: September 2026.
-- Feel free to use this as a template. **Replace all personal content, images, and links with your own.**
+- Feel free to use this as a template. but Make sure to **Replace all personal content, images, and links with your own.**
 - If you find it useful, don't forget to give it a ⭐.
 
 I hope this works for you as well!
