@@ -427,17 +427,44 @@
       align-items: center;
       text-align: center;
     }
-
-    .content-section {
+    
+    .Intro {
       flex-direction: column;
+      align-items: center;
+      justify-content: center;
     }
 
-    .left-panel, .right-panel {
+    .Intro h1 {
+      font-size: 1.5rem;
+    }
+
+    .Intro p {
+      font-size: 1rem;
+    }
+
+    .Intro li {
+      font-size: 0.9rem;
+    }
+
+    .left-area {
+      width: 96%;
+      text-align: center;
+      padding-left: 0;
+    }
+ 
+    .Right-area {
       width: 100%;
+      margin: 10px 0px 0px 0px;
+      text-align: center; 
+      justify-content: center;
     }
 
-    .left-panel {
-      padding: 40px 20px;
+    .Right-area img {
+      height: 250px;
+      width: 290px;
+      margin: 0;
+      align-items: center;
+      justify-content: center;
     }
 
     .hamburger {
@@ -464,6 +491,7 @@
 
     .nav-btn {
       text-align: center;
+      justify-content: center;
     }
   }
 

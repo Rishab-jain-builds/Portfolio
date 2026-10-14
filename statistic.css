@@ -409,9 +409,13 @@
 
   /* Structural conversions: Clear floats and make columns full width */
   .About_Instructor,
-  .About_Course,
   .F {
     flex-direction: column;
+    display: flex;
+  }
+
+  .About_Course {
+    flex-direction: column-reverse;
     display: flex;
   }
 
@@ -496,6 +500,7 @@
 
   .nav-btn {
     text-align: center;
+    justify-content: center;
   }
 }
   

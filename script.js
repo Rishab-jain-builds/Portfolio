@@ -18,7 +18,7 @@ if (hamburgerBtn && navBar) {
   });
 }
 
-const phrases = ["Web Developer", "Data Scientist", "ML Enthusiast", "Writer"];
+const phrases = [" Web Developer", " Aspiring Data Scientist", " Future ML Enthusiast", " Programmer", " Future AI Engineer"];
   const typedEl = document.getElementById('typed-text');
 
   let phraseIndex = 0;
