@@ -58,3 +58,17 @@ const phrases = [" Web Developer", " Aspiring Data Scientist", " Future ML Enthu
   }
 
   tick();
+
+  window.addEventListener("load", () => {
+  const loader = document.getElementById("loader");
+  const portfolio = document.getElementById("portfolio");
+
+  // Keep the loader visible for at least 1 second total
+  const minDisplayTime = 1000;
+  const wait = Math.max(0, minDisplayTime - performance.now());
+
+  setTimeout(() => {
+    loader.classList.add("hidden");
+    portfolio.style.opacity = "1";
+  }, wait);
+});
