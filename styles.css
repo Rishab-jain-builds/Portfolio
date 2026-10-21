@@ -182,7 +182,7 @@
   .nav-btn:hover,
   .nav-btn.active {
     background-color: #ffffff;
-    color: #4572c2;
+    color: #1470af;
     transform: translateY(-2px);
   }
 
