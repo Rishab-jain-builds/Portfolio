@@ -566,6 +566,25 @@
       margin-bottom: 20px;
       border-top: 1px solid rgba(255, 255, 255, 0.15);
     }
+        .footer-content {
+      display: block;
+      column-count: 2;
+      margin-left: 15px;
+    }
+
+    .c {
+      width: 100%;
+      break-inside: avoid;
+      margin-bottom: 20px;
+      padding: 0;
+    }
+
+    .last-row {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      gap: 10px;
+    }
 
     .nav-btn {
       width: 100%;
