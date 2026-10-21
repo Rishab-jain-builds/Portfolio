@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Web develoment Projects</title>
+  <link rel="icon" href="RN_favicon.svg" type="image/x-icon">
+  <!-- Font Awesome CDN for logos -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <style>
+    
+* {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      background-color: #d8dcdb;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      padding: 0px;
+      border: none;
+    }
+    /* Frame outer container */
+    /* Group hamburger + name together on the left */
+.name-group {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+/* Hamburger icon — hidden on desktop by default */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  cursor: pointer;
+  padding: 0;
+  transition: all 0.3s ease;
+}
+
+.hamburger:hover {
+  background-color: #ffffff;
+}
+
+.hamburger span {
+  width: 16px;
+  height: 2px;
+  background-color: #ffffff;
+  border-radius: 2px;
+  margin: 0 auto;
+  transition: all 0.3s ease;
+}
+
+.hamburger:hover span {
+  background-color: #4572c2;
+}
+
+/* Morph into an X when open */
+.hamburger.active span:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+.hamburger.active span:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+
+    .page-frame {
+      background-color: #e3e3e3;
+      padding: 20px;
+      border: 0px solid #c8c8c8;
+      max-width: 900px;
+      width: 100%;
+    }
+
+    .portfolio-container {
+      background-color: #1470af;
+      color: #ffffff;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+      position: relative;
+      width: 100%;
+    }
+
+    /* --- GLOBAL HEADER SECTION --- */
+    .top-section {
+      padding: 30px 40px 20px 40px;
+    }
+
+    /* Row 1: Name + Social Icons */
+    .header-main-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 15px;
+    }
+
+    .brand-name {
+      font-size: 1.1rem;
+      font-weight: 600;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+
+    /* Social Links (Right side of Row 1) */
+    .social-links {
+      display: flex;
+      gap: 10px;
+    }
+
+    .social-icon {
+      color: #ffffff;
+      font-size: 1rem;
+      width: 34px;
+      height: 34px;
+      border-radius: 50%;
+      background-color: rgba(255, 255, 255, 0.15);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+
+    .social-icon:hover {
+      background-color: #ffffff;
+      color: #4572c2;
+      transform: translateY(-2px);
+    }
+
+    /* Row 2: Navigation Bar Beneath Row 1 */
+    .nav-bar {
+      display: flex;
+      gap: 12px;
+      margin-bottom: 30px;
+      padding-top: 10px;
+      border-top: 1px solid rgba(255, 255, 255, 0.15); /* Separator line between rows */
+      flex-wrap: wrap;
+    }
+
+    .nav-btn {
+      color: #ffffff;
+      text-decoration: none;
+      font-size: 0.88rem;
+      font-weight: 500;
+      padding: 6px 16px;
+      border-radius: 20px;
+      background-color: rgba(255, 255, 255, 0.15);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      transition: all 0.3s ease;
+      white-space: nowrap;
+      display: inline-flex;
+      gap: 10px;
+      align-items: center;
+    }
+
+    .nav-btn:hover,
+    .nav-btn.active {
+      background-color: #ffffff;
+      color: #4572c2;
+      transform: translateY(-2px);
+    }
+
+
+    .p {
+      display: flex;
+      color: Azure;
+    }
+
+    .project-link {
+      width: 30%;
+      margin-left: 0.5%;
+    }
+
+    .project-description {
+      width: 60%;
+      margin-right: 0.5%;
+    }
+
+    .project-link ul {
+      gap: 12px;
+    }
+
+    .link {
+      color: Azure;
+      text-decoration: none;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      background-color: rgba(255, 255, 255, 0.15);
+      border-radius: 20px;
+      padding: 6px 12px;
+      margin: 12px;
+      display: block;
+      text-align: center;
+    }
+
+    .link:hover {
+      color: #1470af;
+      background-color: Azure;
+      transform: translateY(-2px);
+    }
+
+    .project-description p {
+      margin-top: 50px;
+      font-size: 24px;
+    }
+  </style>
+</head>
+
+
+<body>
+  
+    <div class="portfolio-container" id="portfolio">
+      
+      <!-- Top Header Section -->
+
+      <header class="top-section">
+        
+        <!-- ROW 1: Name (Left) & Social Icons (Right) -->
+        <div class="header-main-bar">
+          <div class="name-group">
+            <button class="hamburger" id="hamburgerBtn" aria-label="Toggle menu" aria-expanded="false">
+              <span></span>
+              <span></span>
+              <span></span>
+            </button>
+            <h1 class="brand-name">RISHAB JAIN</h1>
+          </div>
+          
+          <div class="social-links">
+            <a href="https://www.instagram.com/rishab_jain.786?igsh=MWFueXVmYWJycWYydw==" target="_blank" class="social-icon" title="Instagram">
+              <i class="fa-brands fa-instagram"></i>
+            </a>
+            <a href="https://github.com/Rishab-jain-builds/" target="_blank" class="social-icon" title="GitHub">
+              <i class="fa-brands fa-github"></i>
+            </a>
+            <a href="mailto:Rishabjain2909@gmail.com" class="social-icon" title="Email">
+              <i class="fa-regular fa-envelope"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/rishab-jain-084b44428/?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BUnie501wR%2Faz90i13UVVYg%3D%3D" target="_blank" class="social-icon" title="LinkedIn">
+              <i class="fa-brands fa-linkedin-in"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- ROW 2: Navigation Line Directly Beneath Row 1 -->
+        <nav class="nav-bar">
+          <a href="Projects.html" class="nav-btn"><i class="fa-solid fa-reply"></i> back</a>
+        </nav>
+        </header>
+
+        <h1 style="margin-left: 50px;"> WEB DEVELOPEMENT PROJECTS</h1>
+
+      <br><br>
+
+        <div class="projects">
+            <div class="p">
+              <div class="project-link">
+                <h1>Student Portfolio</h1>
+                <br>
+                <div style="width: 80%; border: 1px solid Azure">
+                <li><a class="link" href="https://github.com/Rishab-jain-builds/portfolio" target="_blank">GitHub Repository link</a></li>
+                <li><a class="link" href="https://sites.google.com/view/rishab-jain-portfolio/home" target="_blank">View live link</a></li>
+                </div>
+              </ul>
+              </div>
+
+              <div class="project-description">
+                <p>Created Under Extra Activity of Statistic-1 course of BS (Data Science and Application)'s 1st year of Indian Institute of Technology. I constructed a Student portfolio Using html, css and JavaScript. I also embedded this sitem using Google sheet as the part of assingment.</p>
+              </div>
+              </div>
+              <hr style="margin: 15px; border: 1px solid Azure;">
+              <br>
+              <div class="project-link">
+                <h1>Student Portfolio</h1>
+                <br>
+                <div style="width: 80%; border: 1px solid Azure">
+                <li><a class="link" href="https://github.com/Rishab-jain-builds/portfolio" target="_blank">GitHub Repository link</a></li>
+                <li><a class="link" href="https://sites.google.com/view/rishab-jain-portfolio/home" target="_blank">View live link</a></li>
+                </div>
+              </ul>
+              </div>
+
+              <div class="project-description">
+                <p>Created Under Extra Activity of Statistic-1 course of BS (Data Science and Application)'s 1st year of Indian Institute of Technology. I constructed a Student portfolio Using html, css and JavaScript. I also embedded this sitem using Google sheet as the part of assingment.</p>
+              </div>
+              </div>
+        </div>
+    </div>
+  </body>
