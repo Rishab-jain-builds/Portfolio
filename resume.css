@@ -178,6 +178,7 @@
       line-height: 1.1;
       color: #ffffff;
       letter-spacing: -0.5px;
+      margin-bottom: 330px;
     }
 
     /* Right Side Accordions */
@@ -204,8 +205,8 @@
     }
 
     .pdf:hover {
-      color: #1470af;
-      background-color: #ffffff;
+      color:#062B1E;
+      background-color: #FACC15;
       transform: translateY(-2px);
     }
 
@@ -361,7 +362,8 @@
     .footer-content {
       display: block;
       column-count: 2;
-       margin-left: 15px;
+      margin-left: 15px;
+      font-size: 0.6rem;
     }
 
     .c {

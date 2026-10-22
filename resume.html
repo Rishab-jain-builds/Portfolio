@@ -8,8 +8,185 @@
   <!-- Font Awesome CDN for logos and arrows -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <link rel="stylesheet" href="resume.css">
+  <style>
+        /* Portfolio background theme; placed after styles.css to override its page background. */
+    :root {
+      --portfolio-bg: #031C14;
+      --portfolio-green: #062B1E;
+      --portfolio-yellow: #FACC15;
+      --portfolio-white: #F8FAFC;
+    }
+
+    html, body {
+      min-height: 100%;
+    }
+
+    body {
+      background: var(--portfolio-bg);
+      color: var(--portfolio-white);
+      position: relative;
+      isolation: isolate;
+    }
+
+    .portfolio-bg {
+      position: fixed;
+      inset: 0;
+      z-index: 0;
+      overflow: hidden;
+      pointer-events: none;
+      background:
+        radial-gradient(ellipse at 90% 8%,
+          rgba(163, 160, 0, 0.13), transparent 32%),
+        radial-gradient(ellipse at 8% 90%,
+          rgba(16, 185, 129, 0.10), transparent 35%),
+        linear-gradient(125deg,
+          #031C14 0%, #062B1E 52%, #031B13 100%);
+    }
+
+    .data-art {
+      position: absolute;
+      inset: 0;
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
+
+    .portfolio-bg svg {
+    transform: scaleX(-1);
+    transform-origin: center;
+  }
+    /* Keep existing site sections above the decorative background. */
+    .portfolio-container {
+      position: relative;
+      z-index: 1;
+    }
+
+    #loader {
+      z-index: 10;
+    }
+
+    /* Resolve legacy layout/theme conflicts from styles.css. */
+    body {
+      display: block;
+      min-height: 100vh;
+      margin: 0;
+      overflow-x: hidden;
+    }
+
+    .portfolio-container {
+      width: min(100%, 1440px);
+      margin: 0 auto;
+      min-height: 100vh;
+      background: transparent;
+      color: var(--portfolio-white);
+      box-shadow: none;
+      opacity: 1;
+    }
+
+    .top-section { padding: 30px clamp(20px, 4vw, 56px) 20px; }
+    .brand-name { color: var(--portfolio-white); }
+    .nav-btn:hover, .nav-btn.active {
+      color: #062B1E;
+      background: var(--portfolio-yellow);
+      border-color: var(--portfolio-yellow);
+    }
+    .social-icon:hover, .hamburger:hover {
+      color: #062B1E;
+      background: var(--portfolio-yellow);
+    }
+    .hamburger:hover span { background: #062B1E; }
+
+        .footer {
+      background: rgba(3, 28, 20, 0.92);
+      border-top: 1px solid rgba(250, 204, 21, 0.35);
+      padding: 24px clamp(20px, 4vw, 56px) 0;
+    }
+    .footer-logo { overflow-wrap: anywhere; }
+    .last-row { padding: 18px 0 24px; gap: 12px; }
+  </style>
 </head>
 <body>
+
+    <!-- Decorative dark-green background and data illustration -->
+  <div class="portfolio-bg" aria-hidden="true">
+    <svg class="data-art" viewBox="0 0 1600 900"
+         preserveAspectRatio="xMidYMid slice"
+         xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <linearGradient id="chartBars" x1="0" y1="1" x2="0" y2="0">
+          <stop offset="0%" stop-color="#0D4430" stop-opacity="0.02"/>
+          <stop offset="100%" stop-color="#65A30D" stop-opacity="0.25"/>
+        </linearGradient>
+        <linearGradient id="goldLine" x1="0" y1="1" x2="1" y2="0">
+          <stop offset="0%" stop-color="#B8A500"/>
+          <stop offset="100%" stop-color="#FACC15"/>
+        </linearGradient>
+        <radialGradient id="goldGlow">
+          <stop offset="0%" stop-color="#FACC15" stop-opacity="0.15"/>
+          <stop offset="100%" stop-color="#FACC15" stop-opacity="0"/>
+        </radialGradient>
+        <filter id="softGlow" x="-50%" y="-50%" width="200%" height="200%">
+          <feGaussianBlur stdDeviation="15"/>
+        </filter>
+      </defs>
+
+      <circle cx="1500" cy="100" r="260" fill="url(#goldGlow)"/>
+      <circle cx="100" cy="850" r="200" fill="#84CC16" opacity="0.07" filter="url(#softGlow)"/>
+
+      <!-- Subtle analytics bars on the right -->
+      <g fill="url(#chartBars)">
+        <rect x="1010" y="515" width="10" height="180"/>
+        <rect x="1030" y="480" width="10" height="215"/>
+        <rect x="1050" y="535" width="10" height="160"/>
+        <rect x="1070" y="455" width="10" height="240"/>
+        <rect x="1090" y="420" width="10" height="275"/>
+        <rect x="1110" y="470" width="10" height="225"/>
+        <rect x="1130" y="390" width="10" height="305"/>
+        <rect x="1150" y="430" width="10" height="265"/>
+        <rect x="1170" y="350" width="10" height="345"/>
+        <rect x="1190" y="400" width="10" height="295"/>
+        <rect x="1210" y="325" width="10" height="370"/>
+        <rect x="1230" y="365" width="10" height="330"/>
+        <rect x="1250" y="300" width="10" height="395"/>
+        <rect x="1270" y="340" width="10" height="355"/>
+        <rect x="1290" y="275" width="10" height="420"/>
+        <rect x="1310" y="315" width="10" height="380"/>
+        <rect x="1330" y="250" width="10" height="445"/>
+        <rect x="1350" y="285" width="10" height="410"/>
+        <rect x="1370" y="230" width="10" height="465"/>
+        <rect x="1390" y="270" width="10" height="425"/>
+        <rect x="1410" y="210" width="10" height="485"/>
+        <rect x="1430" y="245" width="10" height="450"/>
+        <rect x="1450" y="190" width="10" height="505"/>
+        <rect x="1470" y="220" width="10" height="475"/>
+      </g>
+
+      <path d="M430 880 C650 850 760 780 900 650 S1100 540 1230 570 S1450 490 1600 420"
+            fill="none" stroke="#4D7C0F" stroke-width="1.2" opacity="0.35"/>
+      <path d="M700 760 C850 790 900 750 1020 640 S1180 540 1270 540 S1440 320 1600 270"
+            fill="none" stroke="#84A51A" stroke-width="1.4" opacity="0.45"/>
+
+      <path d="M710 760 C850 790 910 735 985 650 S1090 555 1190 550 S1370 500 1450 390 S1540 280 1600 270"
+            fill="none" stroke="url(#goldLine)" stroke-width="2.5"/>
+      <g fill="#FACC15">
+        <circle cx="985" cy="650" r="5"/>
+        <circle cx="1190" cy="550" r="5"/>
+        <circle cx="1450" cy="390" r="5"/>
+        <circle cx="1520" cy="300" r="5"/>
+      </g>
+
+      <g fill="#FACC15" opacity="0.8">
+        <circle cx="32" cy="770" r="2"/><circle cx="58" cy="770" r="2"/>
+        <circle cx="84" cy="770" r="2"/><circle cx="110" cy="770" r="2"/>
+        <circle cx="32" cy="796" r="2"/><circle cx="58" cy="796" r="2"/>
+        <circle cx="84" cy="796" r="2"/><circle cx="110" cy="796" r="2"/>
+        <circle cx="32" cy="822" r="2"/><circle cx="58" cy="822" r="2"/>
+        <circle cx="84" cy="822" r="2"/><circle cx="110" cy="822" r="2"/>
+        <circle cx="32" cy="848" r="2"/><circle cx="58" cy="848" r="2"/>
+        <circle cx="84" cy="848" r="2"/><circle cx="110" cy="848" r="2"/>
+      </g>
+    </svg>
+  </div>
 
     <div class="portfolio-container" id="portfolio">
       
@@ -62,8 +239,8 @@
         
         <!-- Left Title -->
         <div class="resume-left">
-          <h2 class="resume-title">My Resume</h2><br>
-          <a class="pdf" href="Rishab_jain_Resume.pdf" download="Rishab_jain_Resume.pdf" target="_blank">Download pdf</a> 
+          <h2 class="resume-title">My <strong style="color: #FACC15;">Resume</strong></h2><br>
+          <a class="pdf" href="Rishab_jain_Resume.pdf" download="Rishab_jain_Resume.pdf" target="_blank"><i class="fa-solid fa-download"></i> RESUME</a> 
         </div>
 
         <!-- Right Collapsible Accordion Sections -->

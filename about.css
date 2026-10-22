@@ -175,114 +175,23 @@
     width: 100%;
   }
 
-/* Area 1: Landing Area*/
 
-  .wel {
-    display: flex;
-  }  
-
-/*Landing Area's left part */
-
-  .left-section {
-    margin-left: 35px;
-    margin-bottom: 25px;
-    display: flex;
-    flex-direction: column;
-    gap: 25px;
-    font-size: clamp(1.5rem, 5vw, 3rem);
-    line-height: 1.6;
-    padding-top: 10px;
-  }
-
-  .left-section p {
-      max-width: 750px;
-    }
-
-/* Row 1: with hand shake Animation */
-
-  .Row-1 {
-    display: inline-flex;
-    gap: 3px;
-  }
-
-  .hand {
-    width: 56px;
-    height: 56px;
-    transform-origin: 78% 88%; /* pivot point = the wrist */
-    animation: wave 1.2s infinite;
-    margin-top: 3px;
-}
-
-@keyframes wave {
-  0%   { transform: rotate(0deg); }
-  10%  { transform: rotate(14deg); }
-  20%  { transform: rotate(-8deg); }
-  30%  { transform: rotate(14deg); }
-  40%  { transform: rotate(-4deg); }
-  50%  { transform: rotate(10deg); }
-  60%  { transform: rotate(0deg); }
-  100% { transform: rotate(0deg); }
-}
-
-/*Row 2: contains no seprate styling */
-
-/*Row 3: Text typing Animation */
-
-.typing-wrap {
-  font-size: clamp(1.5rem, 5vw, 2.4rem);
-  font-weight: 700;
-  min-height: 3rem;
-  display: flex;
-  align-items: center;
-  justify-content: left;
-  flex-wrap: wrap;
-  gap: 4px;
-  word-break: break-word;
-  margin-bottom: 400px;
-  }
-
-  #typed-text {
-    color: #ffffff;
-    white-space: pre;
-  }
-
-  .cursor {
-    display: inline-block;
-    width: 3px;
-    height: 1.1em;
-    background: #ffffff;
-    margin-left: 2px;
-    animation: blink 0.8s steps(1) infinite;
-  }
-
-/*Landing Area's Right part */
-
-  .right-section {
-    margin-left: 200px;
-  }
-
-  .right-section img {
-    height: 480px; 
-    width: 500px;
-    margin-bottom: 100px;
-  }
-
-/* Area 2: Introduction with Image on Right*/
+/* Area 1: Introduction with Image on Right*/
 
   .Intro {
-    color:Azure; 
-    background-color: #1470af; 
+    color:Azure;  
     display: flex;
   }
 
   .left-area {
-    width: 65%;
+    width: 98%;
     font-size: 1.75rem;
     text-align: center;
     display: flex; 
     flex-direction: column; 
     gap: 18px; 
     padding-left: 20px;
+    position: relative;
   }
 
   .left-area h1 {
@@ -295,27 +204,11 @@
   }
 
   .Right-area {
-    margin-left: 0px;
-    width: 35%;
+    display: none; 
   }
 
-  .Right-area Img {
-    height: 500px; 
-    width: 500px; 
-    border: 1px solid Azure; 
-    margin: 40px 0px 0px auto;
-    border: none;
 
-  }
-
-  .profile-img:hover {
-    height: 206px;
-    width: 156px;
-    margin: 50px auto auto 225px;
-    transform: translateY(-2px);
-  }
-
-  /*Area 3: My skills */
+  /*Area 2: My skills */
 
   .skill-set {
     display: flex;
@@ -329,14 +222,14 @@
 
 
   .skill {
-    color: #1470af;
+    color: #000000;
     text-decoration: none;
     font-size: 0.88rem;
     font-weight: 500;
     padding: 6px 16px;
     border-radius: 20px;
-    background-color: rgba(255, 255, 255, 1);
-    border: 1px solid rgba(0, 0, 0, 1);
+    background-color: #FACC15;
+    border: 1px solid #ffffff;
     transition: all 0.3s ease;
     white-space: nowrap;
     display: inline-flex;
@@ -393,8 +286,8 @@
   }
 
   .l-social-icon:hover {
-    background-color: #ffffff;
-    color: #4572c2;
+     background-color: #FACC15;
+      color: #062B1E;
     transform: translateY(-2px);
   }
 
@@ -548,7 +441,8 @@
     .footer-content {
       display: block;
       column-count: 2;
-       margin-left: 15px;
+      margin-left: 15px;
+      font-size: 0.6rem;
     }
 
     .c {

@@ -286,6 +286,7 @@
       display: block;
       column-count: 2;
        margin-left: 15px;
+       font-size: 0.6rem;
     }
 
     .c {
@@ -304,13 +305,196 @@
     
 
   }
-
-  </style>
-</head>
-
-
-<body>
   
+        :root {
+      --portfolio-bg: #031C14;
+      --portfolio-green: #062B1E;
+      --portfolio-yellow: #FACC15;
+      --portfolio-white: #F8FAFC;
+    }
+
+    html, body {
+      min-height: 100%;
+    }
+
+    body {
+      background: var(--portfolio-bg);
+      color: var(--portfolio-white);
+      position: relative;
+      isolation: isolate;
+    }
+
+    .portfolio-bg {
+      position: fixed;
+      inset: 0;
+      z-index: 0;
+      overflow: hidden;
+      pointer-events: none;
+      background:
+        radial-gradient(ellipse at 90% 8%,
+          rgba(163, 160, 0, 0.13), transparent 32%),
+        radial-gradient(ellipse at 8% 90%,
+          rgba(16, 185, 129, 0.10), transparent 35%),
+        linear-gradient(125deg,
+          #031C14 0%, #062B1E 52%, #031B13 100%);
+    }
+
+    .data-art {
+      position: absolute;
+      inset: 0;
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
+
+    /* Keep existing site sections above the decorative background. */
+    .portfolio-container {
+      position: relative;
+      z-index: 1;
+    }
+
+    #loader {
+      z-index: 10;
+    }
+
+    /* Resolve legacy layout/theme conflicts from styles.css. */
+    body {
+      display: block;
+      min-height: 100vh;
+      margin: 0;
+      overflow-x: hidden;
+    }
+
+    .portfolio-container {
+      width: min(100%, 1440px);
+      margin: 0 auto;
+      min-height: 100vh;
+      background: transparent;
+      color: var(--portfolio-white);
+      box-shadow: none;
+      opacity: 1;
+    }
+
+    .top-section { padding: 30px clamp(20px, 4vw, 56px) 20px; }
+    .brand-name { color: var(--portfolio-white); }
+    .nav-btn:hover, .nav-btn.active {
+      color: #062B1E;
+      background: var(--portfolio-yellow);
+      border-color: var(--portfolio-yellow);
+    }
+
+
+    .social-icon:hover, .hamburger:hover {
+      color: #062B1E;
+      background: var(--portfolio-yellow);
+    }
+    .hamburger:hover span { background: #062B1E; }
+
+        .footer {
+      background: rgba(3, 28, 20, 0.92);
+      border-top: 1px solid rgba(250, 204, 21, 0.35);
+      padding: 24px clamp(20px, 4vw, 56px) 0;
+    }
+    .footer-logo { overflow-wrap: anywhere; }
+    .last-row { padding: 18px 0 24px; gap: 12px; }
+
+      .skill_cont {
+      color: var(--portfolio-white);
+      background: rgba(6, 43, 30, 0.72);
+      border-top: 1px solid rgba(250, 204, 21, 0.22);
+      border-bottom: 1px solid rgba(250, 204, 21, 0.14);
+      padding: 42px clamp(20px, 4vw, 56px);
+      align-items: center;
+      gap: 24px;
+      }
+      </style>
+</head>
+<body>
+
+    <!-- Background and decorative illustrations -->
+  <div class="portfolio-bg" aria-hidden="true">
+    <svg class="data-art"
+         viewBox="0 0 1600 900"
+         preserveAspectRatio="xMidYMid slice"
+         xmlns="http://www.w3.org/2000/svg">
+
+      <defs>
+        <linearGradient id="chartBars" x1="0" y1="1" x2="0" y2="0">
+          <stop offset="0%" stop-color="#0D4430" stop-opacity="0.02"/>
+          <stop offset="100%" stop-color="#65A30D" stop-opacity="0.25"/>
+        </linearGradient>
+
+        <linearGradient id="goldLine" x1="0" y1="1" x2="1" y2="0">
+          <stop offset="0%" stop-color="#B8A500"/>
+          <stop offset="100%" stop-color="#FACC15"/>
+        </linearGradient>
+
+        <radialGradient id="goldGlow">
+          <stop offset="0%" stop-color="#FACC15" stop-opacity="0.15"/>
+          <stop offset="100%" stop-color="#FACC15" stop-opacity="0"/>
+        </radialGradient>
+
+        <filter id="softGlow" x="-50%" y="-50%" width="200%" height="200%">
+          <feGaussianBlur stdDeviation="15"/>
+        </filter>
+      </defs>
+
+      <!-- Decorative corner glow -->
+      <circle cx="1500" cy="100" r="260" fill="url(#goldGlow)"/>
+      <circle cx="100" cy="850" r="200"
+              fill="#84CC16" opacity="0.07" filter="url(#softGlow)"/>
+      <circle cx="1500" cy="850" r="200" fill="#84CC16" opacity="0.07" filter="url(#softGlow)"/>
+      <circle cx="100" cy="100" r="260" fill="url(goldGlow)"/>
+
+ 
+
+      <!-- Bottom-left dot grid -->
+      <g fill="#FACC15" opacity="0.8">
+        <circle cx="32" cy="770" r="2"/>
+        <circle cx="58" cy="770" r="2"/>
+        <circle cx="84" cy="770" r="2"/>
+        <circle cx="110" cy="770" r="2"/>
+
+        <circle cx="32" cy="796" r="2"/>
+        <circle cx="58" cy="796" r="2"/>
+        <circle cx="84" cy="796" r="2"/>
+        <circle cx="110" cy="796" r="2"/>
+
+        <circle cx="32" cy="822" r="2"/>
+        <circle cx="58" cy="822" r="2"/>
+        <circle cx="84" cy="822" r="2"/>
+        <circle cx="110" cy="822" r="2"/>
+
+        <circle cx="32" cy="848" r="2"/>
+        <circle cx="58" cy="848" r="2"/>
+        <circle cx="84" cy="848" r="2"/>
+        <circle cx="110" cy="848" r="2"/>
+      </g>
+
+        <g fill="#FACC15" opacity="0.8">
+        <circle cx="1486" cy="770" r="2"/>
+        <circle cx="1512" cy="770" r="2"/>
+        <circle cx="1538" cy="770" r="2"/>
+        <circle cx="1564" cy="770" r="2"/>
+
+        <circle cx="1486" cy="796" r="2"/>
+        <circle cx="1512" cy="796" r="2"/>
+        <circle cx="1538" cy="796" r="2"/>
+        <circle cx="1564" cy="796" r="2"/>
+
+        <circle cx="1486" cy="822" r="2"/>
+        <circle cx="1512" cy="822" r="2"/>
+        <circle cx="1538" cy="822" r="2"/>
+        <circle cx="1564" cy="822" r="2"/>
+
+        <circle cx="1486" cy="848" r="2"/>
+        <circle cx="1512" cy="848" r="2"/>
+        <circle cx="1538" cy="848" r="2"/>
+        <circle cx="1564" cy="848" r="2"/>
+      </g>
+    </svg>
+  </div>
+
     <div class="portfolio-container" id="portfolio">
       
       <!-- Top Header Section -->

@@ -163,18 +163,16 @@
      /* Main Content */
 .About_Instructor {
   display: flex;
-  Background-color: #1470af;
   margin-bottom: 20px;
 }
 
 .About_Course {
   display: flex;
-  Background-color: #f2f2f2;
   margin-bottom: 10px;
   margin-top: 10px;
   min-height: 360px; 
-  border: 3px solid #1470af; 
   padding: 5px 0px;
+  color: #ffffff;
 }
 
 .left-panel {
@@ -206,13 +204,11 @@
 
 .Left-Column h1 {
   font-size: 36px;
-  color: #1470af;
   font-family:cursive;  
 }
 
 .Left-Column p {
   font-size: 24px;
-  color: #1470af;
   font-family:sans-serif;
 }
 
@@ -220,7 +216,6 @@
   list-style-type: square;
   padding: 0;
   font-size: 24px;
-  color: #1470af;
 }
 
 .Right-Column {
@@ -252,7 +247,6 @@
   padding-top: 0px;
   padding-left: 30px;
   padding-right: 30px;
-  background-color: #1470af;
   color: azure;
   border-top: none;
   margin-top: 0px;
@@ -278,8 +272,13 @@
 
 .F {
   display: flex;
-  Background-color: #1470af;
-  margin-bottom: 20px;
+  Background-color: rgba(6, 43, 30, 0.3);
+  border-top: 1px solid rgba(250, 204, 21, 0.54);
+  border-bottom: 1px solid rgba(250, 204, 21, 0.36);
+  align-items: center;
+  gap: 24px;
+  margin-bottom: 25px;
+  
 }
 
 .left-Activity { 
@@ -351,7 +350,7 @@
 
 .submit:hover {
   background-color: #ffffff;
-  color: #1470af;
+  color: #000000;
   transform: translateY(-2px)
 }
 
@@ -441,7 +440,8 @@
   .footer-content {
     display: block;
     column-count: 2;
-     margin-left: 15px;
+    margin-left: 15px;
+    font-size: 0.6rem;
   }
 
   .c {

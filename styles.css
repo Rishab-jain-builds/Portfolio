@@ -5,7 +5,7 @@
   #loader {
     position: fixed;
     inset: 0;
-    background: #ffffff;
+    background: #031C14;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -17,7 +17,7 @@
     width: 50px;
     height: 50px;
     border: 5px solid rgba(255, 255, 255, 0.3);
-    border-top-color: #1470af;
+    border-top-color: #FACC15;
     border-radius: 50%;
     animation: spin 0.9s linear infinite;
   }
@@ -222,7 +222,6 @@
     margin-bottom: 25px;
     display: flex;
     flex-direction: column;
-    gap: 25px;
     font-size: clamp(1.5rem, 5vw, 3rem);
     line-height: 1.6;
     padding-top: 10px;
@@ -234,14 +233,10 @@
 
 /* Row 1: with hand shake Animation */
 
-  .Row-1 {
-    display: inline-flex;
-    gap: 3px;
-  }
 
   .hand {
-    width: 56px;
-    height: 56px;
+    width: 25px;
+    height: 25px;
     transform-origin: 78% 88%; /* pivot point = the wrist */
     animation: wave 1.2s infinite;
     margin-top: 3px;
@@ -272,19 +267,20 @@
   flex-wrap: wrap;
   gap: 4px;
   word-break: break-word;
-  margin-bottom: 400px;
+  margin: 20px 0 20px 0;
   }
 
   #typed-text {
     color: #ffffff;
     white-space: pre;
+    margin-left: 10px;
   }
 
   .cursor {
     display: inline-block;
     width: 3px;
     height: 1.1em;
-    background: #ffffff;
+    background: #FACC15;
     margin-left: 2px;
     animation: blink 0.8s steps(1) infinite;
   }
@@ -592,3 +588,30 @@
       justify-content: center;
     }
   }
+
+/* Portfolio theme/layout overrides (dark forest green + white + yellow). */
+:root { --portfolio-bg: #031C14; --portfolio-green: #062B1E; --portfolio-yellow: #FACC15; --portfolio-white: #F8FAFC; }
+html { min-height: 100%; }
+body { display: block; min-height: 100vh; background: var(--portfolio-bg); color: var(--portfolio-white); overflow-x: hidden; }
+.portfolio-container { width: min(100%, 1440px); min-height: 100vh; margin: 0 auto; background: transparent; color: var(--portfolio-white); box-shadow: none; }
+.typing-wrap { margin-bottom: 0; }
+.right-section { display: none; }
+.Intro { color: var(--portfolio-white); background: rgba(6,43,30,.72); border-top: 1px solid rgba(250,204,21,.22); border-bottom: 1px solid rgba(250,204,21,.14); }
+.left-area h1 { color: var(--portfolio-white); }
+.left-area b { color: var(--portfolio-yellow); }
+#li { color: #FDE68A; }
+.footer { background: rgba(3,28,20,.92); border-top-color: rgba(250,204,21,.35); }
+.nav-btn:hover, .nav-btn.active { color: #062B1E; background: var(--portfolio-yellow); border-color: var(--portfolio-yellow); }
+.social-icon:hover, .hamburger:hover { color: #062B1E; background: var(--portfolio-yellow); }
+.hamburger:hover span { background: #062B1E; }
+@media (max-width: 768px) {
+  body { overflow-x: hidden; }
+  .typing-wrap { flex-direction: row; margin-bottom: 0; }
+  .left-section { margin-left: 0; }
+  .right-section { display: none; }
+  .Intro { flex-direction: column-reverse; align-items: stretch; }
+  .left-area { width: 100%; margin-left: 0; text-align: left; }
+  .Right-area { margin: 0; }
+  .footer-content { column-count: 1; }
+  .c { width: 100%; }
+}
