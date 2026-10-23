@@ -207,8 +207,8 @@
     }
 
     .link:hover {
-      color: #1470af;
-      background-color: Azure;
+      color: #062B1E;
+      background-color: #FACC15;
       transform: translateY(-2px);
     }
 
@@ -407,6 +407,28 @@
       align-items: center;
       gap: 24px;
       }
+
+    @media (max-width: 768px) {
+      .data-art { opacity: 0.35; }
+      .top-section { padding: 22px 20px 12px; }
+      .header-main-bar { flex-direction: row; align-items: center; }
+      .last-row { align-items: center; text-align: center; font-size: 0.85rem; }
+      .footer-content {column-count: 2;}
+      .footer-logo {font-size: 0.7rem;}
+    }
+
+    @media (max-width: 420px) {
+      .social-links { gap: 6px; }
+      .social-icon { width: 30px; height: 30px; }
+      .brand-name { font-size: 1rem;}
+    }
+
+    /* Respect reduced-motion preferences */
+    @media (prefers-reduced-motion: reduce) {
+    .data-art {
+        transition: none;
+    }
+}
       </style>
 </head>
 <body>
@@ -492,6 +514,33 @@
         <circle cx="1538" cy="848" r="2"/>
         <circle cx="1564" cy="848" r="2"/>
       </g>
+
+              <g fill="#FFC107">
+    <circle cx="142" cy="318" r="2" opacity="0.35" />
+    <circle cx="287" cy="905" r="1" opacity="0.50" />
+    <circle cx="412" cy="176" r="1" opacity="0.25" />
+    <circle cx="538" cy="742" r="2" opacity="0.40" />
+    <circle cx="661" cy="421" r="1" opacity="0.30" />
+    <circle cx="790" cy="1012" r="2" opacity="0.45" />
+    <circle cx="893" cy="264" r="1" opacity="0.55" />
+    <circle cx="1015" cy="638" r="1" opacity="0.20" />
+    <circle cx="1138" cy="95" r="2" opacity="0.35" />
+    <circle cx="1262" cy="877" r="1" opacity="0.40" />
+    <circle cx="1384" cy="381" r="2" opacity="0.30" />
+    <circle cx="1502" cy="1041" r="1" opacity="0.50" />
+    <circle cx="1619" cy="552" r="1" opacity="0.25" />
+    <circle cx="1741" cy="203" r="2" opacity="0.45" />
+    <circle cx="1853" cy="718" r="1" opacity="0.35" />
+    <circle cx="76" cy="603" r="1" opacity="0.40" />
+    <circle cx="219" cy="489" r="2" opacity="0.30" />
+    <circle cx="354" cy="966" r="1" opacity="0.20" />
+    <circle cx="617" cy="150" r="1" opacity="0.55" />
+    <circle cx="935" cy="497" r="2" opacity="0.25" />
+    <circle cx="1077" cy="309" r="1" opacity="0.40" />
+    <circle cx="1446" cy="724" r="1" opacity="0.30" />
+    <circle cx="1696" cy="961" r="2" opacity="0.35" />
+    <circle cx="1805" cy="446" r="1" opacity="0.50" />
+  </g>
     </svg>
   </div>
 
@@ -534,14 +583,14 @@
         </nav>
         </header>
     
-        <h1 style="margin-left: 50px;"> WEB APPLICATION PROJECTS</h1>
+        <h1 style="margin-left: 50px;"><strong style="color: #FACC15;">WEB APPLICATION</strong> PROJECTS</h1>
 
       <br><br>
 
         <div class="projects">
             <div class="p">
               <div class="project-link">
-                <h1>MAD 1</h1>
+                <h1><strong style="color: #FACC15;">MAD</strong> 1</h1>
                 <p style="color: rgba(255, 255, 255, 0.75);"> <i>(Curricular @ IIT Madras)</i></p>
                 <br>
                 <a class="link" href="a.html" target="_blank">GitHub Repository link</a>
@@ -559,7 +608,7 @@
           
             <div class="p">
               <div class="project-link">
-                <h1>MAD 2</h1>
+                <h1><strong style="color: #FACC15;">MAD</strong> 2</h1>
                 <p style="color: rgba(255, 255, 255, 0.75);"> <i>(Curricular @ IIT Madras)</i></p>
                 <br>
                 <a class="link" href="a.html" target="_blank">GitHub Repository link</a>
