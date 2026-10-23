@@ -337,7 +337,6 @@
   }
 
   .profile-img:hover {
-    border: 1px solid #1470af;
     transform: translateY(-2px);
   }
 

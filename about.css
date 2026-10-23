@@ -228,8 +228,8 @@
     font-weight: 500;
     padding: 6px 16px;
     border-radius: 20px;
-    background-color: #FACC15;
-    border: 1px solid #ffffff;
+    background-color: #ffffff;
+    border: 2px solid #FACC15;
     transition: all 0.3s ease;
     white-space: nowrap;
     display: inline-flex;

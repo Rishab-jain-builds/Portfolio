@@ -7,10 +7,10 @@
 
     <style>
         .Error {
+            justify-self: center;
             position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
+            margin: auto auto auto auto;
+           
         }
         .Error h1 {
             font-size: 150px;
@@ -18,7 +18,7 @@
             text-align: center;
             vertical-align: middle;
             margin-bottom: 0px;
-            margin-top: 0px;
+            margin-top: 240px;
         }
         .Error h3 {
             font-size: 40px;
@@ -35,14 +35,6 @@
             vertical-align: middle;
             margin-bottom: 0px;
         }
-         .nav-bar {
-            position: absolute;
-            top: 75%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            text-align: center;
-            vertical-align: middle;
-        }
 
         .nav-btn {
             color: #062B1E;
@@ -54,13 +46,28 @@
             background-color: #FACC15;
             border: 1px solid #062B1E;
             transition: all 0.3s ease;
-            white-space: nowrap;
+            margin-left: 45%;
+          
         }
 
          .nav-btn:hover {
             background-color: #ffffff;
             color: #000000;
             transform: translateY(-2px);
+        }
+
+        @media (max-width: 768px) {
+          .Error h1 {
+            margin-top: 120px;
+          }
+
+          #break {
+            display: none;
+          }
+
+          .nav-btn {
+            margin-left: 38%;
+          }
         }
 
         :root {
@@ -283,15 +290,21 @@
   </g>
     </svg>
   </div>
-        <div class="Error">
-            <h1>404</h1>
-            <h3>This Page isn't in the dataset.</h3>
-            <p>Nothing lives at this address - the route you followed doesn't</p>
-            <p>match anything in the record.</p>
-        </div>
-        <div class="nav-bar">
+  <div class="main-content">       
+    <div class="Error">
+        <h1>404</h1>
+        <h3>This Page isn't in the dataset.</h3>
+        <p>Nothing lives at this address - the route you followed doesn't <br> match anything in the record.</p>  
+        <br>
+        <br>
         <a href="index.html" class="nav-btn">Return!</a>
+        <br><br><br id="break"><br id="break">
+        <br id="break"><br id="break"><br id="break"><br id="break"><br id="break"><br id="break"><br id="break"><br id="break"><br id="break">
+        <p style="margin-top: 36px;"> This is due to either the Page is not avilable right now! or It is unable to load. come back later to check it</p>
         </div>
-    </body
+        </div>
+ 
+        
+      </body>
 
 </html>
