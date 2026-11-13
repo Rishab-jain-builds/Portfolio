@@ -81,5 +81,34 @@ const phrases = [" Web Developer", " Aspiring Data Scientist", " Future ML Enthu
   setTimeout(() => {
     element.classList.add("visible");
   }, wait + 500);
-  });
+
+});
+
+  // Show the notice popup
+  (function () {
+    var popup = document.getElementById('noticePopup');
+    var closeBtn = document.getElementById('noticeClose');
+
+    function showPopup() {
+      popup.classList.remove('is-hidden');
+      closeBtn.focus();
+    }
+
+    function hidePopup() {
+      popup.classList.add('is-hidden');
+    }
+
+    closeBtn.addEventListener('click', hidePopup);
+
+    popup.addEventListener('click', function (e) {
+      if (e.target === popup) hidePopup();
+    });
+
+    if (document.readyState === 'complete') {
+      showPopup();
+    } else {
+      window.addEventListener('load', showPopup);
+    }
+  })();
+
   
