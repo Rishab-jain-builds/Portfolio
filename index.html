@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Rishab Jain - Portfolio</title>
-  <link rel="icon" href="RN_favicon.svg" type="image/x-icon">
+  <link rel="icon" href="rn_favicon.svg" type="image/x-icon">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
   <link rel="stylesheet" href="styles.css">
@@ -19,6 +19,10 @@
 
     html, body {
       min-height: 100%;
+    }
+
+    html {
+    scroll-behavior: smooth;
     }
 
     body {
@@ -93,38 +97,90 @@
     .hamburger:hover span { background: #062B1E; }
 
     .wel {
+      display: flex;
+      flex-wrap: wrap;
       position: relative;
       min-height: 570px;
       align-items: center;
-      padding: 24px clamp(20px, 4vw, 56px) 48px;
+      padding: 24px clamp(20px, 4vw, 56px) 0;
     }
+
+  .slide-in-text {
+  font-family: system-ui, sans-serif;
+  
+  /* Initial hidden state */
+  opacity: 0;
+  transform: translateX(-50px); /* Start 50px to the left */
+
+}
+
+  .slide-in-text.loaded {
+    animation: slideIn 0.8s ease-out forwards;
+  }
+
+@keyframes slideIn {
+  to {
+    opacity: 1;
+    transform: translateX(0); /* Slide into original position */
+  }
+}
 
     .left-section {
       position: relative;
       z-index: 1;
       width: min(100%, 690px);
       margin: 0;
-      padding: 20px 0;
+      padding: 20px 0 0 0;
       line-height: 1.35;
+    }
+
+    .right-section {
+      position: relative;
+      z-index: 1;
+      width: min(100%, 500px);
+      margin: 0;
+      padding: 20px 0;
     }
 
     .left-section p { max-width: 100%; }
     .typing-wrap {
       min-height: 3rem;
       max-width: 100%;
+      margin-left: 0;
     }
     #typed-text { white-space: normal; overflow-wrap: anywhere; }
-    .right-section { display: none; }
 
     .Intro {
       color: var(--portfolio-white);
       background: rgba(6, 43, 30, 0.72);
+      backdrop-filter: blur(2px);
       border-top: 1px solid rgba(250, 204, 21, 0.22);
       border-bottom: 1px solid rgba(250, 204, 21, 0.14);
       padding: 42px clamp(20px, 4vw, 56px);
       align-items: center;
       gap: 24px;
     }
+
+    .info {
+      display: flex;
+      gap: 12px;
+      margin-top: 20px;
+      background: rgba(6, 43, 30, 0.72);
+      border: 1px solid rgba(250, 204, 21, 0.22);
+      padding: 12px 20px;
+      border-radius: 12px;
+      width: min(100%, 400px);
+      margin-left: 1200px;
+      opacity: 0;
+      transform: translateX(120px); /* Shorter slide distance for small sections */
+      transition: opacity 2.5s ease, transform 2.5s ease;
+    }
+
+    .info.visible {
+      opacity: 1;
+      transform: translateX(0);
+    }
+
     .left-area {
       flex: 1 1 420px;
       width: auto;
@@ -158,6 +214,12 @@
     #li:hover { color: #FACC15; background: none; border: 2px solid #FACC15;}
     #li-l:hover {color: #062B1E; background-color: #FACC15; border: 1px solid #062B1E;}
 
+    #li-1  { background-color: #FACC15; border: 1px solid #062B1E; border-radius: 20px; color: #062B1E; padding: 6px 16px;  text-decoration: none;}
+    #li-2 {color: #FACC15; border: 2px solid #FACC15; border-radius: 20px; padding: 6px 16px; text-decoration: none;}
+    #li-1:hover { color: #FACC15; background: none; border: 2px solid #FACC15;}
+    #li-2:hover {color: #062B1E; background-color: #FACC15; border: 1px solid #062B1E;}
+
+
     .footer {
       background: rgba(3, 28, 20, 0.92);
       border-top: 1px solid rgba(250, 204, 21, 0.35);
@@ -181,7 +243,7 @@
       .wel { min-height: auto; padding: 24px 22px 44px; }
       .left-section { width: 100%; text-align: left; font-size: clamp(1.45rem, 6vw, 2.2rem); }
       .Row-1 { justify-content: flex-start; }
-      .typing-wrap { flex-direction: row; align-items: flex-start; font-size: clamp(1.25rem, 5vw, 1.9rem); }
+      .typing-wrap { flex-direction: row; align-items: flex-start; font-size: clamp(1.25rem, 5vw, 1.9rem); margin-left: 35;}
       .Intro { padding: 32px 22px; }
       .Intro { flex-direction: column-reverse; align-items: stretch; }
       .left-area { width: 100%; text-align: left; }
@@ -193,6 +255,7 @@
       .xyz { width: 100%; height: 150px; }
       .quote {gap: 15px;}
       .footer-logo {font-size: 0.7rem;}
+      .info {margin-left: 0; align-items: flex-start; gap: 10px;}
       #break {display: none;}
     }
 
@@ -300,7 +363,7 @@
       </g>
 
       
-        <g fill="#FFC107">
+  <g fill="#FFC107">
     <circle cx="142" cy="318" r="2" opacity="0.35" />
     <circle cx="287" cy="905" r="1" opacity="0.50" />
     <circle cx="412" cy="176" r="1" opacity="0.25" />
@@ -386,9 +449,9 @@
     <div class="wel">
       <div class="left-section"  (formely: header-bio)>
             <p style="font-size: 20px; text-align: left; margin-left: 15px;"> HELLO, <img src="hi.png" class="hand" alt="hand-shake"> I'M</p>
-            <h1 style="color: #FACC15"> RISHAB JAIN </h1>
-            <p>Welcome to my <strong style="color: #CBD5E1">Portfolio</strong>.</p>
-            <div class="typing-wrap" style="margin-left: 35px;">
+            <h1 style="color: #FACC15" class="slide-in-text"> RISHAB JAIN </h1>
+            <p class="slide-in-text">Welcome to my <span style="color: #CBD5E1">Portfolio</span>.</p>
+            <div class="typing-wrap">
             <p>I'm a</p>
           <div>
             <span id="typed-text"></span>
@@ -404,35 +467,41 @@
             </p>
           </div>
           </div>
+          <br>
           
-          <Img src="xyz.png">
+          <Img src="xyz.png" class="text from-bottom">
 
-    <br id="break">
-    <br id="break">
-    <br>
-    <br>
-    <br>
-    <br> 
 
         </div>
       <!-- The chart and curve illustration now occupy this area via the page background. -->
-      <div class="right-section" aria-hidden="true"></div>
+      <div class="right-section">
+      </div>
      
 
     </div> <!--wel closes-->
 
+<div >
+        <div class="info">
+        <a href="#intro" id="li-1"><i class="fa-solid fa-circle-info"></i> Who I'm</a>
+        <a href="Rishab_jain_Resume.pdf" download id="li-2"><i class="fa-solid fa-download"></i> Resume</a>
+      </div>
+</div>
+<br>
+<br>
+<br>
+<br>
 
-<div class="Intro">
+<div class="Intro" id="intro">
  
   <div class="left-area">
     <h1>LET ME <b>INTRODUCE</b> MYSELF</h1>
     
-          <p> Hi, I'm Rishab Jain. </p>
+          <p> Hi, I'm Rishab Jain. (he/him, 19)</p>
           <p>A future Data Scientist and Software Engineer.</p>
           <p>I'm a Data and ML enthusiast pursuing a B.S. in Data Science and Applications at IIT Madras. I enjoy turning data into insights and building clean, interactive things on the web.</p>
           <p>Take a look at my projects, and resume, or get in touch if you'd like to collaborate.</p>
         
-           <div class="CTA"><a href="About.html" id="li">Know more about me <i class="fa-solid fa-arrow-right"></i></a> <a href="contact.html" id="li-l"><strong>Get in Touch</strong></a></div>
+           <div class="CTA"><a href="projects.html" id="li"><strong>View My Projects</strong> <i class="fa-solid fa-arrow-right"></i></a> <a href="contact.html" id="li-l"><strong>Get in Touch</strong></a></div>
           
   </div>
  
@@ -498,9 +567,9 @@
 
 
 </div> <!-- Closes .portfolio-container -->
-  
 <script src="script.js">
 </script>
+
 
 </body>
 </html>

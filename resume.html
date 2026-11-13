@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Rishab Jain - Resume</title>
-  <link rel="icon" href="RN_favicon.svg" type="image/x-icon">
+  <link rel="icon" href="rn_favicon.svg" type="image/x-icon">
   <!-- Font Awesome CDN for logos and arrows -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <link rel="stylesheet" href="resume.css">
@@ -83,6 +83,47 @@
       opacity: 1;
     }
 
+    
+    .info-card {
+      background-color: rgba(255, 255, 255, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      border-radius: 12px;
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .info-label {
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      opacity: 0.8;
+      font-weight: 600;
+    }
+
+    .link {
+      color: #ffffff;
+      font-size: 1.25rem;
+      font-weight: 600;
+      text-decoration: none;
+      word-break: break-all;
+      transition: opacity 0.3s ease;
+    }
+
+    .link:hover {
+      opacity: 0.85;
+      text-decoration: underline;
+    }
+
+    .content {
+      margin-left: 20px;
+    }
+
+    .sub-content {
+      margin-left: 40px;
+    }
+
     .top-section { padding: 30px clamp(20px, 4vw, 56px) 20px; }
     .brand-name { color: var(--portfolio-white); }
     .nav-btn:hover, .nav-btn.active {
@@ -96,7 +137,7 @@
     }
     .hamburger:hover span { background: #062B1E; }
 
-        .footer {
+     .footer {
       background: rgba(3, 28, 20, 0.92);
       border-top: 1px solid rgba(250, 204, 21, 0.35);
       padding: 24px clamp(20px, 4vw, 56px) 0;
@@ -209,7 +250,7 @@
         <circle cx="84" cy="848" r="2"/><circle cx="110" cy="848" r="2"/>
       </g>
 
-                    <g fill="#FFC107">
+    <g fill="#FFC107">
     <circle cx="142" cy="318" r="2" opacity="0.35" />
     <circle cx="287" cy="905" r="1" opacity="0.50" />
     <circle cx="412" cy="176" r="1" opacity="0.25" />
@@ -290,27 +331,35 @@
         <!-- Left Title -->
         <div class="resume-left">
           <h2 class="resume-title">My <strong style="color: #FACC15;">Resume</strong></h2><br>
-          <a class="pdf" href="Rishab_jain_Resume.pdf" download="Rishab_jain_Resume.pdf" target="_blank"><i class="fa-solid fa-download"></i> RESUME</a> 
+          <div class="info-card">
+            <div style="dispaly: flex;"><span style="color: #FACC15; opacity: 1;">OFFICIAL RESUME</span> <span class="info-label"> • PDF • click to view or save standard</span></div>
+            <div style="display: flex; gap: 25px;">
+            <a href="Rishab_jain_Resume.pdf" download="Rishab_jain_Resume.pdf" target="_blank" class="link" style="background-color: #FACC15; border:1px solid #062B1E; padding: 12px 20px; border-radius: 14px; color: #062B1E; margin-top: 15px;"><i class="fa-solid fa-download"></i> Download</a>
+            <a href="Rishab_jain_Resume.pdf" target="_blank" class="link" style="border:1px solid #FACC15; padding: 12px 20px; border-radius: 14px; color: #FACC15; margin-top: 15px;">view <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+
+           
+          </div>
         </div>
 
         <!-- Right Collapsible Accordion Sections -->
         <div class="resume-right">
 
-          <!-- NEW: Personal Details Section -->
+        <!-- NEW: Personal Details Section -->
           <div class="accordion-item">
             <button class="accordion-header">
               Personal Details
               <i class="fa-solid fa-chevron-down"></i>
             </button>
             <div class="accordion-content">
-              <p><strong>Name:</strong> Rishab Jain</p>
-              <p><strong>Age:</strong> 19</p>
-              <p><strong>Sex:</strong> Male</p>
-              <p><strong>Martial Status:</strong> Single </p>
-              <p><strong>Location:</strong> Muzaffarnagar, Uttar Pradesh-251002</p>
-              <p><strong>Languages:</strong> English, Hindi</p>
-              <p><strong>Hobbies & Interests:</strong> Writing, Music, Media Editing, Web Development</p>
-              <p><strong>Nationality:</strong> Indian</p>
+              <p><strong>Name : </strong> Rishab Jain</p>
+              <p><strong>Age : </strong> 19</p>
+              <p><strong>Sex : </strong> Male</p>
+              <p><strong>Martial Status : </strong> Single </p>
+              <p><strong>Location : </strong> Muzaffarnagar, Uttar Pradesh-251002</p>
+              <p><strong>Languages : </strong> English, Hindi</p>
+              <p><strong>Hobbies & Interests : </strong> Writing, Music, Media Editing, Web Development</p>
+              <p><strong>Nationality : </strong> Indian</p>
             </div>
           </div>
           
@@ -321,27 +370,47 @@
               <i class="fa-solid fa-chevron-down"></i>
             </button>
             <div class="accordion-content">
-              <h3><strong>Indian Institute Of Technology, Madras</strong> — class of 2030</h3>
-              <p><strong>Bachelor in Science (B.S.)</strong> in Data Science and Applications</p>
-              <p><strong>Status:</strong> Currently Pursuing (at Foundational Level)</p>
-              <p><Strong>Subjects:</Strong> <a href="resume/bs_subject.html" target="_blank" style="color:#ffffff"> Click here to view Subject</a></p>
+              <div style="display: flex; justify-content: space-between;">
+              <h3><strong>Indian Institute Of Technology, Madras</strong></h3>
+              <h3 align="right">[2026-Present]</h3>
+              </div>
+              
+              <p class="content"><strong>Bachelor in Science (B.S.)</strong> in Data Science and Applications</p>
+              <p class="sub-content"><strong>Status:</strong> Currently Pursuing (at Foundational Level)</p>
+              <p class="sub-content"><Strong>Subjects:</Strong> <a href="resume/bs_subject.html" target="_blank" style="color:#ffffff"> Click here to view Subject</a></p>
 
               <br>
             <div class="hidden">
-              <h3><strong>Sample College name</strong> - class of 2031</h3>
-              <p><Strong>Bachelor in Technology (B.Tech.)</Strong> Sample-Course</p>
-              <p><strong>Status:</strong> Joining Soon!</p>
-              <p><strong>Subject:</strong> <a href="resume/bt_subject.html" target="_blank" style="color:#ffffff"> Click here to view Subjects</a></p>
+              <div style="display: flex; justify-content: space-between;">
+                  <h3><strong>Sample College name</strong></h3>
+                  <h3>[2027-Present]</h3>
+              </div>
+            
+              <p class="content"><Strong>Bachelor in Technology (B.Tech.)</Strong> Sample-Course</p>
+              <p class="sub-content"><strong>Status:</strong> Joining Soon!</p>
+              <p class="sub-content"><strong>Subject:</strong> <a href="resume/bt_subject.html" target="_blank" style="color:#ffffff"> Click here to view Subjects</a></p>
              <br>
             </div>
-              <h3><strong>Central Board of Secondary Education</strong>, Delhi</h3>
-              <br>
-              <p><strong>Senior Secondary (XII)</strong> - 2026 </p>
-              <p><strong>CGPA:</strong> 8.74 (83%)</p>
-              <p><strong>Major Subjects:</strong> Physics, Chemistry, Mathematics</p>
-              <br>
-              <p><Strong>Secondary (X)</Strong> - 2024 </p>
-              <p><strong>CGPA:</strong> 9.58 (91%)</p>
+               <div style="display: flex; justify-content: space-between;">
+                <h3><strong>Central Board of Secondary Education</strong>, Delhi</h3>
+                <h3>[2022-2026]</h3>
+               </div>
+              
+              
+              <div style="display: flex; justify-content: space-between;">
+                <p class="content"><strong>Senior Secondary (XII)</strong></p>
+              <p>2026</p>
+              </div>
+              
+              <p class="sub-content"><strong>CGPA:</strong> 8.74 (83%)</p>
+              <p class="sub-content"><strong>Major Subjects:</strong> Physics, Chemistry, Mathematics</p>
+            
+              <div style="display: flex; justify-content: space-between;">
+              <p class="content"><Strong>Secondary (X)</Strong></p>
+              <p>2024</p>
+              </div>
+              
+              <p class="sub-content"><strong>CGPA:</strong> 9.58 (91%)</p>
               <br>
               </div>
               </div>
@@ -353,10 +422,17 @@
               <i class="fa-solid fa-chevron-down"></i>
             </button>
             <div class="accordion-content">
-              <h3><strong>Peer Tutor</strong> - Science & Mathematics | (2025-2026)</h3>
+              <div style="display: flex; justify-content: space-between;">
+              <h3><strong>Peer Tutor</strong> - Science & Mathematics</h3>
+              <h3>[2025-2026]</h3>
+              </div>
               <p>Mentored junior students in core Physics and Mathematics concepts, breaking down complex problem-solving methods</p>
               <br>
-              <h3><strong>Freelancing</strong> - data management and Web development | (2024-25)</h3>
+              <div style="display: flex; justify-content: space-between;">
+                <h3><strong>Freelancing</strong> - data management and Web development</h3>
+                <h3>[2024-2025]</h3>
+              </div>
+              
               <p>Delivered Custom documents templates, web templates meeting specific styling requirement</p>
             </div>
           </div>
@@ -368,11 +444,19 @@
               <i class="fa-solid fa-chevron-down"></i>
             </button>
             <div class="accordion-content">
-              <h3><strong>Lead Student Research</strong> Senior Secondary (2025)</h3>
+              <div style="display: flex; justify-content: space-between;">
+                <h3><strong>Lead Student Research</strong> Senior Secondary</h3>
+                <h3>[2025]</h3>
+              </div>
+              
               <p><Strong>Physics File Project</Strong> - Conceptualized and crafted a comprehensive research model and visual dossier on Semi-conductors, earning top evaluation from external examiners.</p>
               <p><strong>Chemistry File Project</strong> - Conceptualized and crafted a comprehensive research model and visual dossier on Food preservative and factor affecting it, earning top evaluation from external examiners.</p>
               <br>
-              <h3><strong>photo/video manipulation or editing</strong> 2025-26</h3>
+              <div style="display: flex; justify-content: space-between;">
+                 <h3><strong>photo/video manipulation or editing</strong></h3>
+                 <h3>[2025-2026]</h3>
+              </div>
+             
               <P>Learned Photo/video editing and Software such as Canva. And practiced advanced digital composite work and media editing with a focus on visual consistency and asset creation.</P>
             </div>
           </div>
@@ -384,12 +468,22 @@
               <i class="fa-solid fa-chevron-down"></i>
             </button>
             <div class="accordion-content">
-              <p><strong>Softwares:</strong> Microsoft Office, Canva</p>
-              <p><strong>Technical:</strong> AI & ML, Data Science,Data management, Web Development (HTML/CSS/JS), Python</p>
+              <p><strong>Softwares:</strong> Microsoft Office, Canva, Git & GitHub</p>
+              <p><strong>Technical:</strong> AI & ML, Data Science, Data management, Web Development (HTML/CSS/JS), Python</p>
               <p><strong>Creative:</strong> Writing, Media Editing, Graphic Designing, Social Media Management</p>
               <p>I am currently learning Cyber-security and Full stack development courses</p>
             </div>
           </div>
+
+
+          <div style="border-bottom: 1px solid rgba(255, 255, 255, 0.3);">           
+             <a href="projects.html" class="accordion-header-1" style="text-decoration: none;">
+              Projects
+              <i class="fa-solid fa-arrow-right" style="font-size: 22px;"></i>
+            </a>
+          </div>
+
+   
 
         </div>
 

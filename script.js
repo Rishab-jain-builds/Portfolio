@@ -62,6 +62,9 @@ const phrases = [" Web Developer", " Aspiring Data Scientist", " Future ML Enthu
   window.addEventListener("load", () => {
   const loader = document.getElementById("loader");
   const portfolio = document.getElementById("portfolio");
+  const elements = document.querySelectorAll(".slide-in-text");
+  const element = document.querySelector(".info");
+
 
   // Keep the loader visible for at least 1 second total
   const minDisplayTime = 1000;
@@ -70,5 +73,13 @@ const phrases = [" Web Developer", " Aspiring Data Scientist", " Future ML Enthu
   setTimeout(() => {
     loader.classList.add("hidden");
     portfolio.style.opacity = "1";
-  }, wait);
-});
+    elements.forEach(element => {
+      element.classList.add("loaded");
+    });
+  }, wait + 10);
+
+  setTimeout(() => {
+    element.classList.add("visible");
+  }, wait + 500);
+  });
+  

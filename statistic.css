@@ -40,7 +40,7 @@
 }
 /* hamburger menu */
 
-   .hamburger {
+.hamburger {
   display: none;
   flex-direction: column;
   justify-content: center;
@@ -398,6 +398,10 @@
       background-color: #ffffff;
       color: #2C3E50;
       transform: translateY(-2px);
+    }
+
+    .hide {
+      display: none;
     }
 
     .footer-logo {
